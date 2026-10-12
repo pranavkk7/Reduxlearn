@@ -1,18 +1,17 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import UserInfo from './Userinfo'
-import Button from './button'
-
-
+import AmountForm from './features/wallet/AmountForm'
+import BalanceCard from './features/wallet/BalanceCard'
+import TransactionList from './features/wallet/TransactionList'
 
 export default function App() {
   return (
-    <div>
-      <h1>Hello redux</h1>
-      <UserInfo />
-      <Button />
-      
-    </div>
+    <main className="app">
+      <header>
+        <h1>Redux wallet</h1>
+        <p className="muted">A small practice app for Redux Toolkit: one slice, selectors and React-Redux hooks.</p>
+      </header>
+      <BalanceCard />
+      <AmountForm />
+      <TransactionList />
+    </main>
   )
 }
